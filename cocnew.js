@@ -6,7 +6,7 @@ const path = require('path');
 
 const CONTRACT_ADDRESS = '0x0fbBBd928EA4eDDd2EAfF51D4D412a3b65452F40';
 const RPC_URL = 'https://mainnet.base.org/';
-const AUTH_TOKEN = fs.readFileSync(path.join(__dirname, 'token.txt'), 'utf8').trim();
+const AUTH_TOKEN = fs.readFileSync(path.join(__dirname, 'coc.txt'), 'utf8').trim();
 const PRIVATE_KEY = process.env.PRIVATE_KEY || '';
 const CHECK_INTERVAL = 5000;
 const LOG_FILE = path.join(__dirname, 'claim-log.txt');
@@ -224,7 +224,7 @@ function updateStats(points, coins) {
 async function main() {
   try {
     if (!AUTH_TOKEN) {
-      throw new Error('No AUTH_TOKEN found in token.txt');
+      throw new Error('No AUTH_TOKEN found in coc.txt');
     }
     const address = await wallet.getAddress();
     const balance = await provider.getBalance(address);
