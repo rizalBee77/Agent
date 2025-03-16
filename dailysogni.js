@@ -1,7 +1,7 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const TOKEN_FILE = 'token.txt';
+const TOKEN_FILE = 'sogni.txt';
 const CLAIM_ENDPOINT = 'https://api.sogni.ai/v2/account/reward/claim';
 const REWARD_ENDPOINT = 'https://api.sogni.ai/v2/account/rewards';
 const DAILY_BOOST_ID = '2';
