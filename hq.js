@@ -21,7 +21,7 @@ const headers = {
 
 async function readBearerToken() {
     try {
-        const data = await fs.readFile('token.txt', 'utf8');
+        const data = await fs.readFile('hq.txt', 'utf8');
         const tokens = data.split('\n').map(token => token.trim()).filter(token => token);
         return tokens.length > 0 ? tokens[0] : null;
     } catch (error) {
