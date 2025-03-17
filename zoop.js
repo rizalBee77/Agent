@@ -6,7 +6,7 @@ const CONFIG = {
   authEndpoint: "https://tgapi.zoop.com/api/oauth/telegram",
   spinEndpoint: "https://tgapi.zoop.com/api/users/spin",
   taskEndpoint: "https://tgapi.zoop.com/api/tasks",
-  queryPath: "./token.txt",
+  queryPath: "./zoop.txt",
   proxyPath: "./proxies.txt",
   retryDelay: 5000, // 5 seconds between retries on failure
   spinDelayMin: 2000, // Minimum delay between spins (2 seconds)
@@ -54,7 +54,7 @@ function getQueryId() {
     return queryId;
   } catch (error) {
     logMessage(`Error reading query file: ${error.message}`);
-    throw new Error("Failed to read query file. Make sure token.txt exists with a valid query ID.");
+    throw new Error("Failed to read query file. Make sure zoop.txt exists with a valid query ID.");
   }
 }
 
